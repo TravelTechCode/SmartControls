@@ -1,0 +1,18 @@
+<mvc:View
+    controllerName="pri.smartcontrols.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartform="sap.ui.comp.smartform"
+>
+    <App id="app">
+        <Page
+            id="page"
+            title="Customer Information"
+        >
+            <content>
+           
+            </content>
+        </Page>
+    </App>
+</mvc:View>

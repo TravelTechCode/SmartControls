@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="pri.smartcontrols.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+>
+    <App id="app">
+        <Page
+            id="page"
+            title="{i18n>title}"
+        >
+            <content>
+                <smartfilterbar:SmartFilterBar
+                    id="idSmartFilterBar"
+                    entitySet="Customers"
+                >
+                    <smartfilterbar:controlConfiguration>
+                        <smartfilterbar:ControlConfiguration
+                            id="idCustomerID"
+                            visibleInAdvancedArea="true"
+                            label="Customer ID"
+                            key="CustomerID"
+                        />
+                    </smartfilterbar:controlConfiguration>
+                </smartfilterbar:SmartFilterBar>
+
+                <smarttable:SmartTable
+                    id="idSmarttable"
+                    smartFilterId="idSmartFilterBar"
+                    entitySet="Customers"
+                    enableAutoBinding="true"
+                    tableType="ResponsiveTable"
+                    initiallyVisibleFields="CustomerID,CompanyName,City">
+                    <Table id="idResponsiveTable" selectionChange="handleSelectionChange" mode = "SingleSelectMaster">
+                    </Table>
+                    </smarttable:SmartTable>
+            </content>
+        </Page>
+    </App>
+</mvc:View>
